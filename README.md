@@ -1,2 +1,3 @@
 # Random-advice
-first Real-World-Project
+Made with javascript, With love
+
