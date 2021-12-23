@@ -1,3 +1,11 @@
+const ASCII_TEXT = 
+"████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗ █████╗ ██╗         ██╗   ██╗██╗\n"+
+"╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗██║         ██║   ██║██║\n"+
+"   ██║   █████╗  ██████╔╝██╔████╔██║██║██╔██╗ ██║███████║██║         ██║   ██║██║\n"+
+"   ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██║╚██╗██║██╔══██║██║         ██║   ██║██║\n"+
+"   ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║██║  ██║███████╗    ╚██████╔╝██║\n"+
+"   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝     ╚═════╝ ╚═╝\n";                                                                           
+
 $('body').terminal(
 {
     iam: function (name) {
@@ -9,9 +17,12 @@ $('body').terminal(
     },
     help: function () {
         this.echo(
-          'help              :: to show this menu\n'+
-          'iam <your name>   :: for greeting\n'
-        + 'developer         :: to know the Anonymous\n');
+          'help                             :: to show this menu\n'
+        +'iam <your name>                  :: for greeting\n'
+        +'developer                        :: to know the Anonymous\n'
+        +'advice                            :: to get a free advice\n'
+        +"weather <city name>               :: check your city's weather\n"
+        +"phone <country code><phone number>:: to get details of your number\n");
     },
     hie: function (name) {
         this.echo(saysomething(name));
@@ -27,7 +38,7 @@ $('body').terminal(
     }
 },
 {
-    greetings: 'Terminal UI - Hack NOSA :: Type \'help\' to show options'
+    greetings: 'Terminal UI - Hack NOSA :: Type \'help\' to show options\n'+ASCII_TEXT
 });
 
 function saysomething(name) {
@@ -85,8 +96,9 @@ async function phoneAPI(phone_no) {
     if (phone_no.length < 10) {
        return "Invalid phone number. (Phone number less than 10 digit)";
     }
-    return "Invalid phone number"
-     
-   
+    return "Invalid phone number"    
+}
 
+function showMatrix() {
+    
 }
